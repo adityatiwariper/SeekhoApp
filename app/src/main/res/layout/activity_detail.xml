@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Trailer or Poster -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/playerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imagePosterDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+        </FrameLayout>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/textTitleDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anime Title"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:paddingTop="12dp"/>
+
+        <!-- Synopsis -->
+        <TextView
+            android:id="@+id/textSynopsis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Synopsis goes here..."
+            android:paddingTop="8dp"/>
+
+        <!-- Genres -->
+        <TextView
+            android:id="@+id/textGenres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:paddingTop="8dp"
+            android:textStyle="italic"/>
+
+        <!-- Cast -->
+        <TextView
+            android:id="@+id/textCast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Main Cast: Actor 1, Actor 2"
+            android:paddingTop="8dp"
+            android:visibility="gone"/>
+
+        <!-- Episodes & Rating -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp">
+
+            <TextView
+                android:id="@+id/textEpisodesDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Episodes: 12"
+                android:paddingEnd="24dp"/>
+
+            <TextView
+                android:id="@+id/textRatingDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rating: 9.0"/>
+        </LinearLayout>
+
+        <!-- Progress Loader -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+</ScrollView>
